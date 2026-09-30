@@ -1,8 +1,10 @@
+package f_anim;
+
 import sys.io.File;
 
 class Build
 {
-	static final F_ANIM_VERSION:String = File.getContent('FANIM.txt');
+	static final F_ANIM_VERSION:String = File.getContent('f_anim/FANIM.txt');
 
 	static var app:Dynamic;
 
@@ -34,7 +36,8 @@ class Build
 			e('set', ['name', 'value'], ['BUILD_DIR', 'export/release']),
 			e('set', ['name', 'value', 'if'], ['BUILD_DIR', 'export/debug', 'debug']),
 			'',
-			e('source', ['path'], ['source']),
+			e('source', ['path'], ['f_anim/source']),
+			e('source', ['path'], ['${app.source}']),
 			e('assets', ['path', 'embed', 'rename'], ['assets', 'true', '']),
 			'',
 			e('haxelib', ['name'], ['flixel']),

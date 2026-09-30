@@ -4,5 +4,6 @@
     "version": "0.0.0",
     "pkg": "com.maverick.fanim",
     "company": "Maverick",
+    "source": "source",
     "custom": {}
 }
