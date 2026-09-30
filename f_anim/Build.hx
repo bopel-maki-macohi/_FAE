@@ -23,7 +23,7 @@ class Build
 		var elements = [
 			'',
 			e('app', ['title', 'file', 'version'], [app.title, app.file, app.version,]),
-			e('app', ['main', 'package', 'company'], ['f_anim.FAnim', app.pkg, app.company ?? 'Maverick']),
+			e('app', ['main', 'package', 'company'], [app.main, app.pkg, app.company ?? 'Maverick']),
 			e('app', ['preloader'], ['flixel.system.FlxPreloader']),
 			'',
 			e('set', ['name', 'value'], ['SWF_VERSION', '11.8']),

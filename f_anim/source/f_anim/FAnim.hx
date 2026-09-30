@@ -1,5 +1,6 @@
 package f_anim;
 
+import flixel.util.typeLimit.NextState;
 import flixel.system.scaleModes.FillScaleMode;
 import haxe.Json;
 import lime.utils.Assets;
@@ -9,6 +10,8 @@ import flixel.FlxGame;
 
 class FAnim extends FlxGame
 {
+	public static var startingState:NextState;
+
 	var playing = false;
 
 	public function new()
@@ -20,9 +23,6 @@ class FAnim extends FlxGame
 	{
 		Save.instance = new Save();
 		Language.instance = new Language();
-
-		FlxG.mouse.enabled = false;
-		FlxG.mouse.visible = false;
 
 		super.create(_);
 
@@ -39,5 +39,7 @@ class FAnim extends FlxGame
 	function proceed()
 	{
 		playing = true;
+
+		if (startingState != null) FlxG.switchState(startingState);
 	}
 }

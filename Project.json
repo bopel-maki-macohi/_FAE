@@ -2,6 +2,7 @@
     "title": "N / A",
     "file": "N / A",
     "version": "0.0.0",
+    "main": "Main",
     "pkg": "com.maverick.fanim",
     "company": "Maverick",
     "source": "source",
