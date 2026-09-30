@@ -2,7 +2,7 @@ import sys.io.File;
 
 class Build
 {
-	static var F_ANIM_VERSION:String = '0.4.2';
+	static final F_ANIM_VERSION:String = File.getContent('FANIM.txt');
 
     static var app:Dynamic;
 
