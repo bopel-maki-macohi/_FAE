@@ -3,5 +3,23 @@
     "file": "N / A",
     "version": "0.0.0",
     "pkg": "com.maverick.fanim",
-    "company": "Maverick"
+    "company": "Maverick",
+    "custom": {
+        "haxedef": [
+            {
+                "name": "bob",
+                "value": "true"
+            },
+            {
+                "name": "bobis",
+                "value": "gay"
+            }
+        ],
+        "define": [
+            {
+                "name": "bobie",
+                "value": "true"
+            }
+        ]
+    }
 }

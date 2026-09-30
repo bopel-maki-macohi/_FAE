@@ -4,11 +4,11 @@ class Build
 {
 	static var F_ANIM_VERSION:String = '0.4.2';
 
-    static var app:Dynamic;
+	static var app:Dynamic;
 
 	static function main()
 	{
-        app = haxe.Json.parse(File.getContent('Project.json'));
+		app = haxe.Json.parse(File.getContent('Project.json'));
 
 		function e(element = '', variables:Array<String>, values:Array<String>)
 		{
@@ -50,6 +50,24 @@ class Build
 			e('haxedef', ['name', 'value'], ['message.reporting', 'pretty']),
 			'',
 		];
+
+		if (app.custom != null)
+		{
+			var custom:Dynamic = app.custom;
+
+			for (field in Reflect.fields(custom))
+			{
+				// trace(field);
+
+				var fieldContent:Array<Dynamic> = Reflect.field(custom, field);
+
+				for (v in fieldContent)
+				{
+					// trace(v);
+					elements.push(e(field, [for (field in Reflect.fields(v)) field], [for (field in Reflect.fields(v)) Reflect.field(v, field)]));
+				}
+			}
+		}
 
 		var project:String = '<project>\n';
 
