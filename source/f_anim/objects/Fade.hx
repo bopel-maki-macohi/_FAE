@@ -9,7 +9,7 @@ class Fade extends FlxSprite
 	{
 		super();
 
-		loadGraphic('fade.png');
+		loadGraphic('${DIRECTORY_FADE}fade.png');
 		resize(width, height);
 	}
 

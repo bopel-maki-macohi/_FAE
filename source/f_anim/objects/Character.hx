@@ -10,7 +10,7 @@ class Character extends FlxSprite
 	{
 		super();
 
-		loadGraphic('chapters/characters/$path.png', true, fw, fh);
+		loadGraphic('${FAE.DIRECTORY_CHARACTERS}$path.png', true, fw, fh);
 
 		for (name => data in anims)
 		{
