@@ -5,8 +5,6 @@ import flixel.util.FlxSave;
 
 class Save extends FlxSave
 {
-	public static var instance:Save;
-
 	override public function new(game:String, path:String)
 	{
 		super();
