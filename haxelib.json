@@ -1,11 +1,11 @@
 {
     "name": "FAE",
     "license": "MIT",
-    "releasenote": "",
+    "releasenote": "Haxelib now!",
     "contributors": [
         "bopel.maki.macohi"
     ],
-    "version": "0.4.3",
+    "version": "0.4.4",
     "dependencies": {
         "flixel": ""
     },
