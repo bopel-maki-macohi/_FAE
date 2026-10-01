@@ -1,0 +1,13 @@
+{
+    "name": "FAE",
+    "license": "MIT",
+    "releasenote": "",
+    "contributors": [
+        "bopel.maki.macohi"
+    ],
+    "version": "0.4.3",
+    "dependencies": {
+        "flixel": ""
+    },
+    "classPath": "source"
+}
