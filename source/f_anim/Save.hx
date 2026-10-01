@@ -7,11 +7,11 @@ class Save extends FlxSave
 {
 	public static var instance:Save;
 
-	override public function new(game:String, company:String)
+	override public function new(game:String, path:String)
 	{
 		super();
 
-		bind(game, company);
+		bind(game, path);
 
 		gameData ??= {};
 

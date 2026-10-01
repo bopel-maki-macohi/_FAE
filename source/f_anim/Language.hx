@@ -28,7 +28,5 @@ class Language
 
 	public function getLangFile(file:String):String return 'lang/$lang/$file';
 
-	public function getTextLangFile(file:String):Array<String> return [
-		for (line in Assets.getText(getLangFile(file))?.split('\n') ?? []) line.trim()
-	];
+	public function getTextLangFile(file:String):Array<String> return [for (line in Assets.getText(getLangFile(file))?.split('\n') ?? []) line.trim()];
 }
